@@ -15,16 +15,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-  <div class="container">
-    <div class="jumbotron">
-      <h1>Movie App</h1>
-      <form>
-        <div class="form-group">
-          <label for="actor">Actor:</label>
-          <input type="actor" class="form-control" id="actorentry">
+    <div class='container-fluid'>
+    <div class='content' ng-view></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js" integrity="sha384-V6/dyDFv85/V/Ktq3ez5B80/c9ZY7jV9c/319rqwNOz3h9CIPdd2Eve0UQBYMMr/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js" integrity="sha384-vKUG6ZisndNtIFOTSdC1VoTcFLTD9Iv5KMkeIAYhTVQvXaDs6zCW1M3ceLyVccge" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+
+    <script src="scripts/app.js"></script>
+    <div class="container">
+      <div ng-app="movieApp" ng-controller="homeCtrl">
+        <div class="jumbotron">
+          <h1>Movie App</h1>
+          <form>
+            <div class="form-group">
+              <label for="actor">Actor:</label>
+              <input type="actor" class="form-control" id="actorentry">
+            </div>
+          </form>
+          <button type="button" id="searchButton" class="btn btn-primary">Search</button>
         </div>
-      </form>
-      <button type="button" class="btn btn-primary">Search</button>
+      </div>  
     </div>
   </body>
-</html>
+</html>  
