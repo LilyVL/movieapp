@@ -7,8 +7,8 @@ app.controller('homeCtrl', function homeCtrl($scope) {
 	$("#searchButton").on('click', function(e) {
 		var nameValue = document.getElementById("actorentry").value.toLowerCase().replace(" ", "+");
 
-		$.get("http://theimdbapi.org/api/find/person?name=" + nameValue, function(data, status){
-  			return data;
+		$.getJSON("http://theimdbapi.org/api/find/person?name=" + nameValue, function(data, status){
+			document.write(JSON.stringify(data[0].filmography.actor));
 		});
 	})
 });
